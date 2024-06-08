@@ -1,0 +1,3 @@
+[submodule "colaml"]
+	path = colaml
+	url = git@github.com:mtnouchi/colaml.git
