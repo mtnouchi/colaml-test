@@ -1,0 +1,5 @@
+from pathlib import Path
+
+ROOT_DIR = Path('/home/jovyan')
+DATA_DIR = ROOT_DIR / 'data'
+DATASET_DIR = ROOT_DIR / 'datasets'
