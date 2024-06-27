@@ -1,0 +1,25 @@
+Bootstrap: docker
+From: jupyter/datascience-notebook:notebook-6.5.2
+
+%files
+    colaml /opt/colaml-test/colaml
+    .git/modules/colaml /opt/colaml-test/.git/modules/colaml
+
+%post
+    set -eu
+    COLAML_COMMITID='6c01617'
+    mamba install -c conda-forge -c bioconda --quiet -y \
+        biopython==1.79 \
+        ete3==3.1.2 \
+        graphviz==6.0.2 \
+        pygraphviz==1.10 \
+        fastcluster==1.2.6 \
+        r-ape==5.7
+    mamba clean --all -y
+    cd /opt/colaml-test/colaml
+    git checkout $COLAML_COMMITID
+    pip install .
+
+%environment
+    export PYTHONPATH="${PYTHONPATH}:${HOME}/config:${HOME}/etc"
+
