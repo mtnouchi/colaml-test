@@ -2,6 +2,12 @@
 
 Test codes for CoLaML (joint inference of ancestral gene COntents and LAtent evolutionary modes by Maximum Likelihood method).
 
+## Citation
+
+CoLaML: Inferring latent evolutionary modes from heterogeneous gene content
+Shun Yamanouchi, Tsukasa Fukunaga, Wataru Iwasaki
+bioRxiv 2024.12.02.626417; doi: https://doi.org/10.1101/2024.12.02.626417
+
 ## file structure
 
 ```
